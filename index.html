@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reward Bin - Customer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <img src="logo.jpg" alt="Team Logo" style="height:50px; vertical-align:middle; margin-right:10px;">
+   
+    <h1>Reward Bin Customer Page</h1>
+</header>
+<div class="container">
+    <!-- Left panel: Bin -->
+    <div class="left-panel">
+        <h2>Welcome, <span id="username">User</span>!</h2>
+
+        <div class="bin-container">
+            <div class="bin-lid" id="bin-lid"></div>
+            <div class="bin-body"></div>
+            <div class="conveyor" id="conveyor"></div>
+        </div>
+
+        <button id="open-bin">Open Bin (Simulate QR Scan)</button>
+
+        <div style="margin-top:20px;">
+            <label>Choose Waste Type:</label>
+            <button class="waste-btn" data-type="Metal">Metal</button>
+            <button class="waste-btn" data-type="Plastic">Plastic</button>
+            <button class="waste-btn" data-type="Paper">Paper</button>
+        </div>
+
+        <div style="margin-top:20px;">
+            <label>Weight (kg):</label>
+            <input type="number" id="weight-input" min="0.1" step="0.1" value="0.5">
+        </div>
+
+        <button id="submit-waste" style="margin-top:10px;">Submit Waste</button>
+
+        <div class="progress-bar">
+            <div class="progress" id="reward-progress">0 Points</div>
+        </div>
+
+        <p id="message" style="margin-top:15px;"></p>
+    </div>
+
+    <!-- Right panel: QR -->
+    <div class="right-panel">
+        <p>Scan QR displayed on the bin to start.</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com" alt="QR Code">
+
+        <div style="margin-top:20px;">
+            <label for="user-select">Simulate User:</label>
+            <select id="user-select">
+                <option value="Alice">Alice</option>
+                <option value="Bob">Bob</option>
+                <option value="Charlie">Charlie</option>
+            </select>
+        </div>
+    </div>
+</div>
+<!-- Place this AFTER your main .container div (the one holding left-panel and right-panel) -->
+<div class="container">
+    <h2>Available Rewards</h2>
+    <div class="reward-grid">
+        <div class="reward-card">
+            <img src="earphones.webp" alt="Earphones">
+            <p>200</p>
+            <button class="redeem-btn" disabled>Redeem</button>
+        </div>
+        <div class="reward-card">
+            <img src="giftcard.webp" alt="Gift Card">
+            <p>500</p>
+            <button class="redeem-btn" disabled>Redeem</button>
+        </div>
+        <div class="reward-card">
+            <img src="waterbottle.webp" alt="Water Bottle">
+            <p>100</p>
+            <button class="redeem-btn" disabled>Redeem</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

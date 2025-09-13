@@ -1,0 +1,65 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f8;
+    color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bins-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.bin-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.fill-bar {
+    width: 50px;
+    height: 150px;
+    background: #ddd;
+    margin: 10px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fill {
+    width: 100%;
+    background: #28a745;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.5s;
+}
+
+.status {
+    font-weight: bold;
+}

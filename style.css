@@ -1,0 +1,177 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f8;
+    color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.left-panel, .right-panel {
+    flex: 1 1 400px;
+    margin: 10px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.bin-container {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    margin: 30px auto;
+}
+
+.bin-body {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: #999;
+    border-radius: 0 0 12px 12px;
+    border: 2px solid #555;
+}
+
+.bin-lid {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background: #555;
+    border-radius: 6px 6px 0 0;
+    transform-origin: top center;
+    transition: transform 0.5s;
+}
+
+.bin-lid.open {
+    transform: rotateX(-70deg);
+}
+
+.conveyor {
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    height: 20px;
+    background: #444;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.waste {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: -20px;
+    left: 65px;
+    transition: top 1s, left 1s;
+}
+
+.waste-metal { background: orange; }
+.waste-plastic { background: #00bfff; }
+.waste-paper { background: #28a745; }
+
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress {
+    height: 20px;
+    background: #28a745;
+    width: 0%;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
+/* ===== Rewards/Gifts Section ===== */
+.reward-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.reward-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.reward-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.reward-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.reward-card p {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.redeem-btn {
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+.redeem-btn:hover:enabled {
+    background: #0056b3;
+}
+
+.redeem-btn:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}

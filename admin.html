@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reward Bin - Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header>
+    <img src="logo.jpg" alt="Team Logo" style="height:50px; vertical-align:middle; margin-right:10px;">
+    <h1>Reward Bin Admin Dashboard</h1>
+</header>
+
+<div class="container">
+    <h2>Bins Overview</h2>
+    <div class="bins-grid">
+        <!-- Bin 1 -->
+        <div class="bin-card" id="bin1">
+            <h3>Bin 1 - Area A</h3>
+            <div class="fill-bar">
+                <div class="fill" style="height: 30%;"></div>
+            </div>
+            <p>Status: <span class="status">Partially Full</span></p>
+            <p>Last Updated: <span class="last-updated">10:30 AM</span></p>
+        </div>
+
+        <!-- Bin 2 -->
+        <div class="bin-card" id="bin2">
+            <h3>Bin 2 - Area B</h3>
+            <div class="fill-bar">
+                <div class="fill" style="height: 80%;"></div>
+            </div>
+            <p>Status: <span class="status">Almost Full</span></p>
+            <p>Last Updated: <span class="last-updated">10:28 AM</span></p>
+        </div>
+
+        <!-- Bin 3 -->
+        <div class="bin-card" id="bin3">
+            <h3>Bin 3 - Area C</h3>
+            <div class="fill-bar">
+                <div class="fill" style="height: 10%;"></div>
+            </div>
+            <p>Status: <span class="status">Empty</span></p>
+            <p>Last Updated: <span class="last-updated">10:20 AM</span></p>
+        </div>
+    </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
